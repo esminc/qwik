@@ -2,6 +2,12 @@
 # This is free software with ABSOLUTELY NO WARRANTY.
 # You can redistribute it and/or modify it under the terms of the GNU GPL 2.
 
+require 'rubygems'
+require 'bundler'
+
+Bundler.setup
+Bundler.require :default
+
 require 'optparse'
 
 $LOAD_PATH.unshift '..' unless $LOAD_PATH.include? '..'
