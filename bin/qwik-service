@@ -5,6 +5,5 @@
 # You can redistribute it and/or modify it under the terms of the GNU GPL 2.
 
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__)+'/../lib')
-$LOAD_PATH.unshift File.expand_path('../../vendor/libalgorithm-diff-ruby-0.4/lib', __FILE__)
 require 'qwik/qwik-service'
 Qwik::QwikService.main(ARGV)

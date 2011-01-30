@@ -11,6 +11,7 @@ Bundler.require :default
 require 'optparse'
 
 $LOAD_PATH.unshift '..' unless $LOAD_PATH.include? '..'
+$LOAD_PATH.unshift File.expand_path('../../../vendor/libalgorithm-diff-ruby-0.4/lib', __FILE__)
 require 'qwik/version'
 
 module Qwik

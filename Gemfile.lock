@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    aspectr (0.3.7)
+    htree (0.7.0)
+    ruby-gd (0.8.0)
+    rubyzip (0.9.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aspectr
+  htree
+  ruby-gd
+  rubyzip
