@@ -1,16 +1,26 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.3)
     aspectr (0.3.7)
+    blankslate (2.1.2.3)
+    bluepill (0.0.44)
+      activesupport (>= 2.3.4)
+      blankslate (>= 2.1.2.2)
+      daemons (>= 1.0.9)
+      state_machine (>= 0.8.0)
+    daemons (1.1.0)
     htree (0.7.0)
     ruby-gd (0.8.0)
     rubyzip (0.9.4)
+    state_machine (0.9.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   aspectr
+  bluepill
   htree
   ruby-gd
   rubyzip
