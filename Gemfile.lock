@@ -11,6 +11,7 @@ GEM
       state_machine (>= 0.8.0)
     daemons (1.1.0)
     htree (0.7.0)
+    i18n (0.5.0)
     ruby-gd (0.8.0)
     rubyzip (0.9.4)
     state_machine (0.9.4)
@@ -22,5 +23,6 @@ DEPENDENCIES
   aspectr
   bluepill
   htree
+  i18n
   ruby-gd
   rubyzip
