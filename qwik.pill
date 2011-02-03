@@ -2,29 +2,15 @@
 
 QWIK_HOME = "/home/qwik/"
 
-Bluepill.application("qwik") do |app|
+Bluepill.application("qwik", :base_dir => "#{QWIK_HOME}/data/tmp") do |app|
   app.process("qwikweb") do |p|
-    p.start_command = "#{QWIK_HOME}/qwik/bin/qwikweb-ctl start"
-    p.restart_command = "#{QWIK_HOME}/qwik/bin/qwikweb-ctl restart"
-    p.stop_command = "#{QWIK_HOME}/qwik/bin/qwikweb-ctl stop"
-
-    p.start_grace_time = 30.seconds
-    p.stop_grace_time = 30.seconds
-    p.restart_grace_time = 60.seconds
-
+    p.start_command = "bundle exec #{QWIK_HOME}/qwik/bin/qwikweb-server -c #{QWIK_HOME}/data/etc/qwik/config.txt"
     p.pid_file = "#{QWIK_HOME}/data/var/run/qwik/qwikweb.pid"
     p.checks :mem_usage, :every => 10.seconds, :below => 100.megabytes, :times => [3,5]
   end
 
   app.process("quickml") do |p|
-    p.start_command = "#{QWIK_HOME}/qwik/bin/quickml-ctl start"
-    p.restart_command = "#{QWIK_HOME}/qwik/bin/quickml-ctl restart"
-    p.stop_command = "#{QWIK_HOME}/qwik/bin/quickml-ctl stop"
-
-    p.start_grace_time = 30.seconds
-    p.stop_grace_time = 30.seconds
-    p.restart_grace_time = 60.seconds
-
+    p.start_command = "bundle exec #{QWIK_HOME}/qwik/bin/quickml-server -c #{QWIK_HOME}/data/etc/qwik/config.txt"
     p.pid_file = "#{QWIK_HOME}/data/var/run/qwik/quickml.pid"
     p.checks :mem_usage, :every => 10.seconds, :below => 100.megabytes, :times => [3,5]
   end
