@@ -6,12 +6,14 @@ Bluepill.application("qwik", :base_dir => "#{QWIK_HOME}/data/tmp") do |app|
   app.process("qwikweb") do |p|
     p.start_command = "bundle exec #{QWIK_HOME}/qwik/bin/qwikweb-server -c #{QWIK_HOME}/data/etc/qwik/config.txt"
     p.pid_file = "#{QWIK_HOME}/data/var/run/qwik/qwikweb.pid"
+    p.restart_grace_time = 10.seconds
     p.checks :mem_usage, :every => 10.seconds, :below => 120.megabytes, :times => [3,5]
   end
 
   app.process("quickml") do |p|
     p.start_command = "bundle exec #{QWIK_HOME}/qwik/bin/quickml-server -c #{QWIK_HOME}/data/etc/qwik/config.txt"
     p.pid_file = "#{QWIK_HOME}/data/var/run/qwik/quickml.pid"
+    p.restart_grace_time = 10.seconds
     p.checks :mem_usage, :every => 10.seconds, :below => 120.megabytes, :times => [3,5]
   end
 end
