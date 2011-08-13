@@ -4,5 +4,8 @@ gem 'htree'
 gem 'rubyzip'
 gem 'aspectr'
 gem 'ruby-gd'
-gem 'i18n'
-gem 'bluepill'
+
+group :production do
+  gem 'bluepill'
+  gem 'i18n'
+end
