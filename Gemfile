@@ -3,9 +3,10 @@ source :rubygems
 gem 'htree'
 gem 'rubyzip'
 gem 'aspectr'
-gem 'ruby-gd'
 
 group :production do
+  gem 'ruby-gd'
   gem 'bluepill'
   gem 'i18n'
 end
+
