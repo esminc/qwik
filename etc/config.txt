@@ -66,6 +66,8 @@
 :log_dir:	/var/log/qwik
 :web_pid_file:	/var/run/qwik/qwikweb.pid
 :ml_pid_file:	/var/run/qwik/quickml.pid
+# :web_server:  /usr/bin/qwikweb-server
+# :ml_server: /usr/bin/quickml-server
 
 # experimental.
 :enable_ruby:	false
